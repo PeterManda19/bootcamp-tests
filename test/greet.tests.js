@@ -2,7 +2,7 @@
 //import { strictEqual } from 'assert';
 
 // Import the greet function
-import greet from './path/to/greet.js';
+//import greet from './path/to/greet.js';
 
 // Describe the tests for the greet function
 describe('greet', function() {
