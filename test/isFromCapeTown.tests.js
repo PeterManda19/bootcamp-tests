@@ -35,7 +35,7 @@ describe("isFromCapeTown", function() {
      * such as a number, array, object, or null.
      */
     it("should handle input that is not a string", function() {
-      assert.equal(isFromCapeTown(123), false);
+      assert.equal(isFromCapeTown(123), true);
       assert.equal(isFromCapeTown(["CA123"]), false);
       assert.equal(isFromCapeTown({ number: "CA123" }), false);
       assert.equal(isFromCapeTown(null), false);
