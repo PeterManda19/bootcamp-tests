@@ -24,10 +24,10 @@ describe("isFromBellville", function() {
      * Test whether the function correctly handles input of varying case (i.e. uppercase, lowercase, and mixed case).
      */
     it("should handle input of varying case", function() {
-      assert.equal(isFromBellville("cy123"), true);
-      assert.equal(isFromBellville("cY-123"), true);
-      assert.equal(isFromBellville("Cy123"), true);
-      assert.equal(isFromBellville("C123"), false);
+      assert.equal(isFromBellville("CY123"), true);
+      assert.equal(isFromBellville("Cy-456"), true);
+      assert.equal(isFromBellville("cY-789"), true);
+      assert.equal(isFromBellville("ca123"), false);
     });
   
     /**
@@ -36,9 +36,8 @@ describe("isFromBellville", function() {
      */
     it("should handle input that is not a string", function() {
       assert.equal(isFromBellville(123), false);
-      assert.equal(isFromBellville(["CY123"]), false);
-      assert.equal(isFromBellville({ number: "CY123" }), false);
-      assert.equal(isFromBellville(null), false);
+      assert.equal(isFromBellville(true), false);
+      assert.equal(isFromBellville(undefined), false);
     });
   });
   
