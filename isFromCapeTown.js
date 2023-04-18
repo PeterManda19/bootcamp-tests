@@ -1,6 +1,8 @@
-function isFromCapeTown(vrnumber){
-    if (typeof vrnumber !== "string") {
-        return false;
+function isFromCapeTown(regNumber) {
+    if (typeof regNumber !== "string") {
+      // If the input is not a string, return false.  
+      return false; 
     }
-    return vrnumber.startsWith("CA");
-};
+    // Convert input to uppercase and check if it starts with "CA".
+    return regNumber.toUpperCase().startsWith("CA"); 
+}
