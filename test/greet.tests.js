@@ -1,4 +1,5 @@
 // Describe the tests for the greet function
+
 describe('greet', function() {
   /**
    * Test case 1: should return a greeting with the given name

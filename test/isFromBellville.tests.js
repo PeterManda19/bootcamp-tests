@@ -1,4 +1,5 @@
-// Describe the tests for the isFromBellville function
+// Describes the tests for the isFromBellville function
+
 describe("isFromBellville", function() {
     /**
      * Test whether the function returns true when given a string that starts with 'CY',
