@@ -10,5 +10,3 @@ function isFromBellville(vrnumber) {
   // Check if vrnumber starts with 'CY'
   return vrnumber.startsWith("CY");
 }
-
-  
