@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 describe('findItemsOver', function() {
   const itemList = [
     {name: 'apple', qty: 10},
