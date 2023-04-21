@@ -11,7 +11,6 @@ function totalPhoneBill(callsNsms){
       smsCount++;
    }
   }
-  
   var callsCost = callsCount * 2.75;
   var smsCost = smsCount * 0.65;
   var totalCost = callsCost + smsCost;
