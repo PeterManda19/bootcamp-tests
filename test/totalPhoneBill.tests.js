@@ -1,7 +1,7 @@
 describe('totalPhoneBill', () => {
-  it('should return R7.25 for one call and one sms', () => {
+  it('should return R3.40 for one call and one sms', () => {
     const result = totalPhoneBill('call,sms');
-    assert.equal(result, 'R7.25');
+    assert.equal(result, 'R3.40');
   });
 
   it('should return R2.75 for one call and no sms', () => {
@@ -9,7 +9,7 @@ describe('totalPhoneBill', () => {
     assert.equal(result, 'R2.75');
   });
 
-  it('should return R1.95 for one sms and no calls', () => {
+  it('should return R0.65 for one sms and no calls', () => {
     const result = totalPhoneBill('sms');
     assert.equal(result, 'R0.65');
   });
