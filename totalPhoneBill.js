@@ -1,17 +1,20 @@
 function totalPhoneBill(callsNsms){
-    var callsNsmsList = callsNsms.split(",");
-    var callsList = [];
-    var smsList = [];
-    
-    for(var i = 0; i < callsNsmsList.length; i++){
-      if( callsNsmsList[i].endsWith("l") ){
-        callsList.push(callsNsmsList[i]);
-     }
-      else if( callsNsmsList[i].endsWith("s") ){
-        smsList.push(callsNsmsList[i]);
-     }
-    }
-    return "R" + parseFloat( 
-      (callsList.length * 2.75) + (smsList.length * 0.65) 
-    ).toFixed(2);
+  var callsNsmsList = callsNsms.split(",");
+  var callsCount = 0;
+  var smsCount = 0;
+  
+  for(var i = 0; i < callsNsmsList.length; i++){
+    if(callsNsmsList[i].trim().endsWith("l")){
+      callsCount++;
+   }
+    else if(callsNsmsList[i].trim().endsWith("s")){
+      smsCount++;
+   }
+  }
+  
+  var callsCost = callsCount * 2.75;
+  var smsCost = smsCount * 0.65;
+  var totalCost = callsCost + smsCost;
+  
+  return "R" + totalCost.toFixed(2);
 }
