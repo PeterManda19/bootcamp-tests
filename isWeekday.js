@@ -1,4 +1,10 @@
 function isWeekday(dayName){
     const trimmedDayName = dayName.trim();
-    return trimmedDayName.endsWith("day") && (!trimmedDayName.startsWith("S"));
+    const validDaysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    
+    if (!validDaysOfWeek.includes(trimmedDayName)) {
+        return false;
+    }
+
+    return trimmedDayName.endsWith("day") && (!trimmedDayName.startsWith("S")) && (!trimmedDayName[0].toLowerCase());
 }
