@@ -1,4 +1,4 @@
-escribe('mostProfitableDepartment', function(){
+describe('mostProfitableDepartment', function(){
 
     it('should return hardware for the given sales data', function(){
         const salesData = [
